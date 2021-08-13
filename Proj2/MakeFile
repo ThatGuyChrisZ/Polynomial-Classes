@@ -1,0 +1,28 @@
+
+
+.cpp :
+	g++ -o $* $*.cpp -std=c++11
+	
+## This will build the two objects files required for "poly_class"
+## and link them i
+##
+
+#
+#
+#
+poly_class_v2: Polynomial.o poly_class_v2.o
+	g++ -o $@ $@.o Polynomial.o -std=c++11
+
+
+#
+#
+#
+poly_class: Polynomial.o poly_class.o
+	g++ -o $@ $@.o Polynomial.o -std=c++11
+	
+#
+#
+#
+
+poly_class.o : Polynomial.h
+Polynomial.o    : Polynomial.h
